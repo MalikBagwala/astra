@@ -4,17 +4,14 @@ import Modal from "../components/Modal/Modal";
 ---
 
 <Layout title="Welcome to Demo.">
-  <main class="bg-gray-100">
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid"></ul>
-    <Modal />
-  </main>
+  <div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti eum
+    debitis nemo, eveniet quisquam accusamus quas neque totam nobis molestias!
+  </div>
+  <Modal client:load> This is so cool</Modal>
+  <div class="container">
+    <div class="h-[1500px]">This is a overflowing page</div>
+  </div>
 </Layout>
 
 <style></style>
-../components/Modal/Modal

@@ -1,3 +1,26 @@
-.base {
-  @apply bg-gray-600;
+.overlay {
+  @apply fixed top-0 right-0 bottom-0 left-0 inset-0;
+  @apply backdrop-filter backdrop-blur-sm;
+}
+
+.body {
+  @apply fixed right-0 bottom-0 left-0;
+  @apply z-10;
+  @apply h-[90%] w-[50%] max-w-[950px];
+  @apply p-0 ml-auto mr-auto;
+  @apply bg-white border border-gray-200 shadow-sm border-solid rounded-tl-lg rounded-tr-lg;
+  animation: rise 700ms forwards cubic-bezier(0.32, 1, 0.23, 1);
+}
+
+.close {
+  @apply absolute rounded-full;
+  @apply h-7 w-7 right-4 top-4;
+}
+@keyframes rise {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
