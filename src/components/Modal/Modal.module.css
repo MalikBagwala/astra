@@ -12,6 +12,9 @@
   animation: rise 700ms forwards cubic-bezier(0.32, 1, 0.23, 1);
 }
 
+.content {
+  @apply overflow-visible h-[500px];
+}
 .close {
   @apply absolute rounded-full;
   @apply h-7 w-7 right-4 top-4;

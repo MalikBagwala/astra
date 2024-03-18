@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Modal from "../components/Modal/Modal";
+import ModalContainer from "../components/ModalContainer";
 ---
 
 <Layout title="Welcome to Demo.">
@@ -8,7 +8,7 @@ import Modal from "../components/Modal/Modal";
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti eum
     debitis nemo, eveniet quisquam accusamus quas neque totam nobis molestias!
   </div>
-  <Modal client:load> This is so cool</Modal>
+  <ModalContainer client:load />
   <div class="container">
     <div class="h-[1500px]">This is a overflowing page</div>
   </div>

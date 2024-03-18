@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Modal.module.css";
+import { useClickOutside } from "@mantine/hooks";
 type Props = {
   isOpen?: boolean;
   onClose?: () => void;
@@ -22,11 +23,13 @@ const Modal = ({ isOpen = true, onClose, children }: Props) => {
       body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
+
+  const ref = useClickOutside(() => onClose?.());
   if (!isOpen) return null;
   return (
     <>
       <div className={styles.overlay} />
-      <div className={styles.body}>
+      <div ref={ref} className={styles.body}>
         <button className={styles.close} onClick={handleClose}>
           X
         </button>
